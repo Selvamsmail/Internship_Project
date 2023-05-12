@@ -1,26 +1,9 @@
-!pip install flask_ngrok
-!pip install pyngrok
-!ngrok authtoken 2PeRoZuDhQBsOnJZ5KAEdQB8jlD_6tg7SwMUAMvzAFYeXqdNZ
-from flask_ngrok import run_with_ngrok
-from flask import Flask, request, jsonify, render_template
-import pickle
-import gdown 
-import re
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import nltk
-from wordcloud import WordCloud
-from nltk.stem import WordNetLemmatizer
-from nltk.corpus import wordnet
-from nltk.corpus import stopwords
-from nltk import word_tokenize
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.model_selection import train_test_split
-nltk.download('stopwords')
-stop_words = stopwords.words('english')
-nltk.download('omw-1.4')
-nltk.download('punkt')
-nltk.download('wordnet')
-nltk.download('averaged_perceptron_tagger')
+pip install flask_ngrok
+pip install pyngrok
+pip install gdown
+pip install pandas
+pip install numpy
+pip install matplotlib
+pip install seaborn
+pip install nltk
+pip install wordcloud
