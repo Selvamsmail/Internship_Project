@@ -1,9 +1,0 @@
-pip install flask_ngrok
-pip install pyngrok
-pip install gdown
-pip install pandas
-pip install numpy
-pip install matplotlib
-pip install seaborn
-pip install nltk
-pip install wordcloud
