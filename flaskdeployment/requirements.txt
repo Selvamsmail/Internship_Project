@@ -27,4 +27,3 @@ tensorflow-probability==0.20.1
 tensorstore==0.1.36
 wordcloud==1.8.2.2
 xgboost==1.7.5
-platform==5.15.107
