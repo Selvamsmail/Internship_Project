@@ -37,6 +37,14 @@ nltk.download('averaged_perceptron_tagger')
 os.makedirs('content', exist_ok=True)
 os.chdir('content')
 
+import platform
+
+# Get the OS version
+os_version = platform.platform()
+
+# Print the OS version
+print("OS Version:", os_version)
+
 gdown.download(id = '1liwwhm01z8NZw9vXTUBz0gL_t98Rrjgm')
 gdown.download(id = '16cOGEvt7L_a0E6S3uoGYA5Kh0_lOZUY3')
 gdown.download(id = '14M5Lf716q5UtuojgJY2zvYRqP92gLeGg')
@@ -75,16 +83,16 @@ def remove_stopwords(rev):
 
 """# app"""
 
-with open('/content/NN_model.pkl', 'rb') as f:
+with open('/app/real-fake-news-neural-network/content/NN_model.pkl', 'rb') as f:
     model = pickle.load(f)
 
-with open('/content/title_vectorizer.pkl', 'rb') as f:
+with open('/app/real-fake-news-neural-network/content/title_vectorizer.pkl', 'rb') as f:
     title_vectorizer = pickle.load(f)
 
-with open('/content/body_vectorizer.pkl', 'rb') as f:
+with open('/app/real-fake-news-neural-network/content/body_vectorizer.pkl', 'rb') as f:
     body_vectorizer = pickle.load(f)
 
-app = Flask('Real_or_Fake_News', template_folder='/content/')
+app = Flask('Real_or_Fake_News', template_folder='/app/real-fake-news-neural-network/content/')
 
 # !pip install pipreqs
 # !pip freeze > requirements.txt
@@ -123,7 +131,7 @@ def index():
         del df['Title']
         del df['Body']
 
-        colsdf = pd.read_csv('/content/columnsdf.csv')
+        colsdf = pd.read_csv('/app/real-fake-news-neural-network/content/columnsdf.csv')
         colsdf.loc[0] = 0
         
         merged_df = colsdf.copy()
