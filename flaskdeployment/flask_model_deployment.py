@@ -13,6 +13,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 import gdown 
 import re
+import os
 
 import pandas as pd
 import numpy as np
@@ -32,6 +33,9 @@ nltk.download('omw-1.4')
 nltk.download('punkt')
 nltk.download('wordnet')
 nltk.download('averaged_perceptron_tagger')
+
+os.makedirs('content', exist_ok=True)
+os.chdir('content')
 
 gdown.download(id = '1liwwhm01z8NZw9vXTUBz0gL_t98Rrjgm')
 gdown.download(id = '16cOGEvt7L_a0E6S3uoGYA5Kh0_lOZUY3')
